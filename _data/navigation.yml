@@ -1,0 +1,14 @@
+docs_list_title: Maria João Mestre
+docs:
+
+- title: Home
+  url: home
+
+- title: About me
+  url: aboutme
+
+- title: Projects
+  url: projects
+
+- title: Contacts
+  url: contacts
