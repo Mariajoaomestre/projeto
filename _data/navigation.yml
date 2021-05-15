@@ -2,7 +2,7 @@ docs_list_title: Maria João Mestre
 docs:
 
 - title: Home
-  url: home
+  url: /
 
 - title: About me
   url: aboutme
