@@ -2,5 +2,17 @@
 layout: default
 title: projects
 ---
+<h1>
+    {% if page.tags contains "ehc" %}
+    European Humanities Conference logo
+    {% elsif page.tags contains "taletrail" %}
+    Tale Trail app
+    {% elsif page.tags contains "laces" %}
+    Laces & Enlaces logo
+    {% elsif page.tags contains "alma" %}
+    Alma logo
+    {% else %}
+    {% endif %}
+</h1>
 
 {{ content }}
