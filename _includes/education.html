@@ -1,0 +1,11 @@
+<h2>{{ site.data.education.docs_list_title }}</h2>
+
+<ul>
+    {% for item in site.data.education.docs %}
+        <li>
+            <img src="{{ item.image }}" alt="{{ item.title }}"/> 
+            {{ item.title }}
+        </li>
+        {{ item.content }}
+    {% endfor %}
+</ul>
