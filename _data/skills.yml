@@ -1,0 +1,26 @@
+docs_list_title: Skills
+docs:
+
+- title: Creatividy
+  image: creativity.png
+  alt: creativity icone
+
+- title: Efficiency
+  image: efficiency.png
+  alt: efficiency icone
+
+- title: Open mind
+  image: open.png
+  alt: open mind icone
+
+- title: Pragmatic
+  image: pragmatic.png
+  alt: pragmatic icone
+
+- title: Strategy
+  image: strategy.png
+  alt: strategy icone
+
+- title: Team work
+  image:  teamwork.png
+  alt: teamwork icone

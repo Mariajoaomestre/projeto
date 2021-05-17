@@ -1,0 +1,13 @@
+---
+layout: default
+title: pages
+---
+{{ content }}
+
+{% if page.tags contains "socialmedia" %}
+{% include socialmedia.html %}
+
+{% elsif page.tags contains "education skills" %}
+{% include education.html %}
+{% include skills.html %}
+{% endif %}
