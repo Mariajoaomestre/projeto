@@ -2,17 +2,24 @@
 layout: default
 title: projects
 ---
-<h1>
-    {% if page.tags contains "ehc" %}
-    European Humanities Conference logo
-    {% elsif page.tags contains "taletrail" %}
-    Tale Trail app
-    {% elsif page.tags contains "laces" %}
-    Laces & Enlaces logo
-    {% elsif page.tags contains "alma" %}
-    Alma logo
-    {% else %}
-    {% endif %}
-</h1>
-
-{{ content }}
+<div class="projects_wrapper">
+    <div class="projects">
+        <h1> Projects </h1>
+        <p> This is my portfolio </p>
+    </div>
+    <section class="projects_content">
+        <h2>
+            {% if page.tags contains "ehc" %}
+            European Humanities Conference logo
+            {% elsif page.tags contains "taletrail" %}
+            Tale Trail app
+            {% elsif page.tags contains "laces" %}
+            Laces & Enlaces logo
+            {% elsif page.tags contains "alma" %}
+            Alma logo
+            {% else %}
+            {% endif %}
+        </h2>
+        {{ content }}
+    </section>
+</div>

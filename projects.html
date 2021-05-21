@@ -3,15 +3,12 @@ layout: projects
 title: Projects
 permalink: /projects/
 ---
-{% for projects in site.projects %}
 
-<div class="projects">
+<div class="project">
+{% for projects in site.projects %}
     <a href="{{ site.baseurl }}/projects/{{ projects.slug }}"><img src="{{ site.baseurl }}{{ projects.image }}" alt="{{ projects.title }}"/></a>
     <h2> {{ projects.title }} </h2>
-{{ projects.description }}
-</div>
-
+    <h3> {{projects.subtitle }} </h3>
+    {{ projects.description }}
 {% endfor %}
-
-<h1> Projects </h1>
-<p> Lorem ipsum dolor sit amet </p>
+</div>

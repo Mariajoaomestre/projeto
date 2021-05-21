@@ -2,12 +2,22 @@
 layout: default
 title: pages
 ---
-{{ content }}
-
-{% if page.tags contains "socialmedia" %}
-{% include socialmedia.html %}
-
-{% elsif page.tags contains "education skills" %}
-{% include education.html %}
-{% include skills.html %}
-{% endif %}
+<div class="pages_wrapper">
+    <div>
+        <h1>
+            {% if page.tags contains "about" %}
+            {{ page.title }} 
+            {% elsif page.tags contains "contacts"%}
+            {{ page.title }} 
+            {% endif %}
+        </h1>
+        <p>
+            {% if page.tags contains "about" %}
+            Maria João Mestre, 20 years old, passionate about Design and all its aspects, especially the present-future of digital. Currently training to became a UX&UI designer. I am in constant research and learning due to the immense curiosity that reigns within me. I love to travel, have new experiences, get to know different places and people. I love to learn from every person I meet. If I chose a word to define myself, it would be uneasiness, for everything. 
+            {% elsif page.tags contains "contacts"%}
+            Let's talk? Send me a message
+            {% endif %}
+        </p>
+    </div>
+    {{ content }}
+</div>
