@@ -1,14 +1,32 @@
 ---
-layout: pages
+layout: page
 title: About me
 permalink: /aboutme/
-tags: about
+description: "Maria João Mestre, 20 years old, passionate about Design and all its aspects, especially the present-future of digital. Currently training to became a UX&UI designer. I am in constant research and learning due to the immense curiosity that reigns within me. I love to travel, have new experiences, get to know different places and people. I love to learn from every person I meet. If I chose a word to define myself, it would be uneasiness, for everything." 
 ---
 <div class="aboutme_wrapper"> 
-    <section>
-        {% include education.html %}
+    <section class="about_content">
+        <h2>{{ site.data.education.docs_list_title }}</h2>
+        <ul>
+            {% for item in site.data.education.docs %}
+                <li>
+                    <img src="{{ site.baseurl }}/assets/img/{{ item.image }}" alt="{{ item.alt }}"/> 
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.date }}</p>
+                    <p>{{ item.content-text }}</p>
+                </li>
+            {% endfor %}
+        </ul>
     </section>
-    <section>
-        {% include skills.html %}
+    <section class="aboout_content">
+        <h2>{{ site.data.skills.docs_list_title }}</h2>
+        <ul>
+            {% for item in site.data.skills.docs %}
+                <li>
+                    <img src="{{ site.baseurl }}/assets/img/{{ item.image }}" alt="{{ item.alt }}"/> 
+                    <h3>{{ item.title }}</h3>
+                </li>
+            {% endfor %}
+        </ul>
     </section>
 </div>
