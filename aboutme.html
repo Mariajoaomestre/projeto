@@ -4,12 +4,12 @@ title: About me
 permalink: /aboutme/
 description: "Maria João Mestre, 20 years old, passionate about Design and all its aspects, especially the present-future of digital. Currently training to became a UX&UI designer. I am in constant research and learning due to the immense curiosity that reigns within me. I love to travel, have new experiences, get to know different places and people. I love to learn from every person I meet. If I chose a word to define myself, it would be uneasiness, for everything." 
 ---
-<div class="aboutme_wrapper"> 
-    <section class="about_content">
+<div> 
+    <section class="container">
         <h2>{{ site.data.education.docs_list_title }}</h2>
-        <ul>
+        <ul class="list">
             {% for item in site.data.education.docs %}
-                <li>
+                <li class="list_items_formation">
                     <img src="{{ site.baseurl }}/assets/img/{{ item.image }}" alt="{{ item.alt }}"/> 
                     <h3>{{ item.title }}</h3>
                     <p>{{ item.date }}</p>
@@ -18,7 +18,7 @@ description: "Maria João Mestre, 20 years old, passionate about Design and all 
             {% endfor %}
         </ul>
     </section>
-    <section class="aboout_content">
+    <section class="container">
         <h2>{{ site.data.skills.docs_list_title }}</h2>
         <ul>
             {% for item in site.data.skills.docs %}

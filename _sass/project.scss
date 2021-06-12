@@ -31,6 +31,10 @@ header {
         flex-direction: column;
         align-items: center;
         list-style: none;
+        @media #{$desktop} {
+            flex-direction: row;
+            justify-content: center;
+        }
 
         li {
             padding: $sp-s $sp-m;
@@ -59,76 +63,82 @@ p {
     @include paragraph; 
 }
 
-main {
-    padding-top: 260px;
+ul {
+    list-style: none;
 }
 
 .content_home {
     display: flex;
     align-items: center;
     flex-direction: column;
+
     .profile_photo {
         border-radius: 50%;
         width: 400px;
-        padding-top: 10px;
+        padding-top: $sp-xs;
     }
 }
 
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media #{$desktop} {
+        flex-direction: row;
+        justify-content: space-between;
+    }  
+
+    .list_items {
+        height: 150px;
+        @media #{$desktop} {
+            width: 47%;
+        }
+    }
+
+    .list_items_formation {
+        height: 400px;
+        @media #{$desktop} {
+            width: 42%;
+        }
+    }
+}
 .socialmedia {
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
-    .socialmedia_logo {
-        width: 100px;
+    @media #{$desktop} {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .sociamedia_child {
+        @media #{$desktop} {
+            width: 20%;
+        }  
+        .socialmedia_logo {
+            width: 100px;
+        }
     }
 }
 
 footer {
     background-color: $primary-color;
     padding: $sp-xs;
+    @media #{$desktop} {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }  
+
     p {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-}
-
-@media #{$desktop} {
-    header {
-        .navigation {
-            flex-direction: row;
-            justify-content: center;
-        }
-    }
-
-    main {
-        padding-top: 100px;
-    }
-
-    .cite2 {
-        display: flex;
-        .cite {
-            padding-left: $sp-l;
-            box-sizing: border-box;
-        }
-    }
-
-    .socialmedia {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        .sociamedia_child {
-            margin: $sp-l;
-        }
-    }
-
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        p {
+        @media #{$desktop} {
             padding: $sp-s;
-        }
+        }  
     }
 }
+
