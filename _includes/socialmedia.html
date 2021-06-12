@@ -1,11 +1,11 @@
 <h2>{{ site.data.socialmedia.docs_list_title }}</h2>
 
-<ul>
+<ul class="socialmedia">
     {% for item in site.data.socialmedia.docs %}
-        <li>
+        <li class="sociamedia_child">
             <a href="{{ item.url }}">
-            <img src="{{ item.image_path }}" alt="{{ item.title }}"/> 
-            {{ item.title }} </a>
+            <img class="socialmedia_logo" src="{{ item.image_path }}" alt="{{ item.title }}"/> 
+            </a>
         </li>
     {% endfor %}
 </ul>

@@ -1,0 +1,37 @@
+@import "colors";
+
+@mixin font {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $secoundary-color;
+}
+
+@mixin heading1 {
+    @include font;
+    font-size: 2rem;
+    line-height: 2.375rem;
+}
+
+@mixin heading2 {
+    @include font;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+}
+
+@mixin heading3 {
+    @include font;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+}
+
+@mixin paragraph {
+    @include font;
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+@mixin link {
+    @include font;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    text-decoration: none;
+}

@@ -1,0 +1,30 @@
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+img { 
+    max-width: 100%;
+    height: auto; 
+}
+
+figure {
+    margin: 0;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 $sp-l;
+    padding-top: $sp-xl;
+    @media #{$desktop} {
+        margin: 0 80px;
+    }
+}

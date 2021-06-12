@@ -1,0 +1,134 @@
+@import "colors";
+@import "typography";
+@import "spacing";
+@import "mediaquerie";
+@import "reset";
+@import "grid";
+
+body {
+    background-color: $tertiary-color; 
+    scroll-behavior: smooth; 
+    @include font; 
+}
+
+header {
+    background-color: $primary-color;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+
+    .nav-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: $sp-xs;
+    }
+
+    .navigation {
+        @include link;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+
+        li {
+            padding: $sp-s $sp-m;
+        }
+
+        a {
+            text-decoration: none;
+            color: $secoundary-color; 
+        }
+
+        a:hover {
+            color: $tertiary-color;
+        }
+    }
+}
+
+h2 {
+    @include heading2; 
+}
+
+h3 {
+    @include heading3; 
+}
+
+p {
+    @include paragraph; 
+}
+
+main {
+    padding-top: 260px;
+}
+
+.content_home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .profile_photo {
+        border-radius: 50%;
+        width: 400px;
+        padding-top: 10px;
+    }
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    .socialmedia_logo {
+        width: 100px;
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    padding: $sp-xs;
+    p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media #{$desktop} {
+    header {
+        .navigation {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    main {
+        padding-top: 100px;
+    }
+
+    .cite2 {
+        display: flex;
+        .cite {
+            padding-left: $sp-l;
+            box-sizing: border-box;
+        }
+    }
+
+    .socialmedia {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        .sociamedia_child {
+            margin: $sp-l;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        p {
+            padding: $sp-s;
+        }
+    }
+}
