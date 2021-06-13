@@ -3,7 +3,6 @@
 @import "spacing";
 @import "mediaquerie";
 @import "reset";
-@import "grid";
 
 body {
     background-color: $tertiary-color; 
@@ -79,6 +78,27 @@ ul {
     }
 }
 
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    @media #{$desktop} {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .sociamedia_child {
+        @media #{$desktop} {
+            width: 20%;
+        } 
+         
+        .socialmedia_logo {
+            width: 100px;
+        }
+    }
+}
+
 .list {
     display: flex;
     flex-direction: column;
@@ -96,32 +116,32 @@ ul {
     }
 
     .list_items_formation {
-        height: 400px;
+        height: 300px;
         @media #{$desktop} {
-            width: 42%;
+            width: 47%;
+        }
+        .school {
+            width: 300px;
         }
     }
 }
-.socialmedia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    @media #{$desktop} {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
 
-    .sociamedia_child {
-        @media #{$desktop} {
-            width: 20%;
-        }  
-        .socialmedia_logo {
-            width: 100px;
-        }
+.skills {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+    @media #{$desktop} {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+
+    .skills_icon {
+        width: 100px;
     }
 }
+
 
 footer {
     background-color: $primary-color;
