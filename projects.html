@@ -4,11 +4,13 @@ title: Project
 permalink: /projects/
 ---
 
-<div class="project">
+<div class="projects">
 {% for projects in site.projects %}
     <a href="{{ site.baseurl }}/projects/{{ projects.slug }}"><img src="{{ site.baseurl }}{{ projects.image }}" alt="{{ projects.title }}"/></a>
-    <h2>{{ projects.title }}</h2>
-    <h3>{{projects.subtitle }}</h3>
-    <p>{{ projects.description }}</p>
+    <div class="projects_info">
+        <h2>{{ projects.title }}</h2>
+        <h3>{{projects.subtitle }}</h3>
+        <p>{{ projects.description }}</p>
+    </div>
 {% endfor %}
 </div>

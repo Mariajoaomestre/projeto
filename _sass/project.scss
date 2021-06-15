@@ -74,7 +74,15 @@ ul {
     .profile_photo {
         border-radius: 50%;
         width: 400px;
-        padding-top: $sp-xs;
+        border-style: dotted;
+        border-width: thick;
+        animation-name: stroke;
+        animation-duration: 5s;
+    }
+
+    @keyframes stroke {
+        from { border-color: $secoundary-color;}
+        to { border-color: $primary-color;}
     }
 }
 
@@ -92,7 +100,7 @@ ul {
         @media #{$desktop} {
             width: 20%;
         } 
-         
+
         .socialmedia_logo {
             width: 100px;
         }
@@ -109,17 +117,18 @@ ul {
     }  
 
     .list_items {
-        height: 150px;
+        height: 200px;
         @media #{$desktop} {
             width: 47%;
         }
     }
 
     .list_items_formation {
-        height: 300px;
+        height: 350px;
         @media #{$desktop} {
             width: 47%;
         }
+
         .school {
             width: 300px;
         }
@@ -130,7 +139,7 @@ ul {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: $sp-s;
     text-align: center;
     @media #{$desktop} {
         grid-template-rows: 1fr 1fr;
@@ -142,6 +151,40 @@ ul {
     }
 }
 
+.projects_info {
+    padding-bottom: $sp-xl;
+}
+
+.project_section {
+    padding-top: $sp-xl;
+    padding-bottom: $sp-xl;
+    display: flex;
+    flex-direction: column;
+    
+    .project_text {
+        width: 80%;
+        @media #{$desktop} {
+            width: 85%;
+        }
+    }
+}
+
+.galery {
+    display: flex;
+    flex-direction: column;
+    @media #{$desktop} {
+        flex-flow: row wrap;
+    }
+
+    .img_project {
+        flex: 100%;
+        padding-bottom: $sp-xl;
+        @media #{$desktop} {
+            flex: 40%;
+            padding-right: $sp-s;
+        } 
+    }
+}
 
 footer {
     background-color: $primary-color;
@@ -161,4 +204,3 @@ footer {
         }  
     }
 }
-
